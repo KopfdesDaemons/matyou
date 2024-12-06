@@ -1,0 +1,53 @@
+.matyou_post_author_headline_section {
+    margin-top: clamp(8em, 2vw, 10em);
+    display: flex;
+    justify-content: center;
+
+    header {
+        padding: 1em clamp(2em, 2vw, 2em);
+        max-width: 100em;
+        flex: 1 1 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(2em, 2vw, 3em);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        justify-content: center;
+        align-items: flex-start;
+
+        img {
+            border-radius: 10em;
+            height: auto;
+            width: auto;
+            max-width: 160px;
+            min-width: 120px;
+            flex: 1 1 30%;
+        }
+
+        .matyou_author_data {
+            font-size: 1.4rem;
+            flex: 1 0 50%;
+
+            h1 {
+                font-size: 3.6rem;
+                margin-top: 0;
+            }
+
+            .matyou_author_name::before {
+                content: '@';
+            }
+
+            .matyou_author_name::after {
+                content: '‧';
+                margin: 0 0.5em;
+            }
+        }
+    }
+
+    &+main {
+        margin-top: 2em;
+
+        .matyou_post_card .matyou_post_card_author_row {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+/*
+    Contains a uniform style for all pagination: feed, post, author page, search, wp-blocks.
+*/
+
+$font-size: clamp(12px, 1.5vw, 16px);
+
+.matyou_pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size;
+    max-width: 100%;
+    gap: 0.5em;
+
+    ::-webkit-scrollbar {
+        height: 1px;
+    }
+
+    .matyou_pagination_controls a {
+        background-color: var(--matyou_primary_color);
+        margin: 0 0.5em;
+        padding: 0.8em 2em;
+        display: flex;
+        color: rgb(14, 14, 14);
+    }
+
+    .matyou_pagination_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 100%;
+    }
+
+    .matyou_pagination_pages {
+        display: flex;
+        overflow-x: auto;
+        gap: 0.5em;
+        padding: 0 0.1em;
+    }
+}
+
+// basic pagination layout for all elements (Numbers + Buttons)
+#matyou_main_content .wp-polls-paging a,
+#matyou_main_content .wp-polls-paging span,
+.wp-block-query-pagination-next,
+.wp-block-query-pagination-previous,
+.matyou_pagination_controls a,
+.post-page-numbers,
+.page-numbers {
+    border-radius: 4px;
+    padding: 0.5em 0.8em;
+    background-color: rgb(41, 41, 41);
+    white-space: nowrap;
+    user-select: none;
+    border: solid 1px transparent;
+}
+
+// pagination current page
+#matyou_main_content .wp-polls-paging .current,
+.current {
+    border: solid 1px gray;
+    color: var(--matyou_font_color);
+}
+
+// pagination hover
+.wp-block-query-pagination-next:hover,
+.wp-block-query-pagination-previous:hover,
+.matyou_pagination_controls a:hover,
+.page-numbers:not(.current, .dots):hover,
+.post-page-numbers:not(.current, .dots):hover {
+    background-color: rgb(54, 54, 54);
+}
+
+.dots {
+    background-color: transparent;
+}
+
+.wp-block-query-pagination.is-layout-flex {
+    flex-wrap: nowrap;
+    font-size: $font-size;
+    align-items: flex-start;
+}
+
+.wp-block-query-pagination-numbers {
+    overflow-x: auto;
+}
+
+#matyou_main_content .wp-polls-paging {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: $font-size;
+    overflow-x: auto;
+}
+
+#matyou_main_content .wp-polls-paging {
+
+    a,
+    span {
+        color: var(--matyou_font_color);
+    }
+}

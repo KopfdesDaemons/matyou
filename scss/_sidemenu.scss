@@ -1,0 +1,195 @@
+@media only screen and (max-width: 600px) {
+    .matyou_sidemenu_open #matyou_sidemenu_closing_div {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+    }
+}
+
+#matyou_sidemenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    width: 0;
+    background-color: inherit;
+    width: 240px;
+    transition: transform 200ms;
+    display: flex;
+    transform: translateX(-260px);
+    flex-direction: column;
+    font-size: 1.4rem;
+    z-index: 1;
+    background-color: var(--matyou_primary_variant_much_darker);
+    border-radius: 0 24px 24px 0;
+    border-right: 4px solid var(--matyou_primary_color);
+
+    a {
+        color: var(--matyou_font_color);
+    }
+
+    @media only screen and (min-width: 600px) {
+        transform: translateX(0);
+    }
+
+    .matyou_sidebar_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        height: 100dvh;
+        padding: 2em 1em 0 1em;
+    }
+
+    &:hover {
+        scrollbar-color: #717171 transparent;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+
+        .matyou_menuitem_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.2em;
+
+            i {
+                padding: 1.2em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #00000044;
+                }
+            }
+
+            a {
+                border-radius: 24px;
+                padding: 1.2em;
+                flex: 1 1 auto;
+                text-decoration: none;
+                position: relative;
+
+                &:hover {
+                    background-color: #00000044;
+                }
+            }
+        }
+
+        .sub-menu {
+            max-height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            border-left: 1px solid;
+            padding-left: 0.5em;
+        }
+
+        &.matyou_submenu_open {
+            >.matyou_menuitem_container {
+
+                .matyou_submenu_toggle {
+                    transform: rotate(180deg);
+                    background-color: #00000044;
+                }
+            }
+
+
+            &>.sub-menu {
+                max-height: 100em;
+                overflow-y: auto;
+                visibility: visible;
+            }
+        }
+
+    }
+
+    ul {
+        padding: 0;
+        display: flex;
+        gap: 0.5em;
+        flex-direction: column;
+        scrollbar-width: thin;
+
+        li {
+            list-style: none;
+        }
+    }
+
+    nav {
+        border-bottom: 2px solid var(--matyou_primary_variant_darker);
+        margin-bottom: 1em;
+    }
+
+    .matyou_sidebar_mainmenu {
+
+        li {
+            display: flex;
+        }
+
+        a {
+            padding: 1.2em;
+            flex: 1 0 auto;
+            border-radius: 24px;
+            display: flex;
+            gap: 1em;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #00000044;
+            }
+        }
+    }
+
+    .matyou_sidebar_lagal_links {
+        margin-top: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 0.5em;
+
+        li {
+            display: inline;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &+.matyou_theme_info {
+            margin-top: 1em;
+        }
+    }
+
+    .matyou_theme_info {
+        margin-top: auto;
+        padding-bottom: 0.5em;
+
+        a,
+        span,
+        div {
+            color: #717171;
+        }
+    }
+}
+
+.matyou_sidemenu_open #matyou_sidemenu {
+    transform: translateX(0);
+
+    @media only screen and (min-width: 600px) {
+        transform: translateX(-260px);
+    }
+}
+
+
+body.admin-bar #matyou_sidemenu {
+    margin-top: 32px; // adminbar
+
+    .matyou_sidebar_content {
+        height: calc(100dvh - 32px); // adminbar
+    }
+}

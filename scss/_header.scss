@@ -1,0 +1,117 @@
+#matyou_header {
+    position: fixed;
+    display: flex;
+    align-items: stretch;
+    height: 56px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    padding-right: 1em;
+
+    .matyou_name {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: var(--matyou_font_color);
+        font-weight: 800;
+
+        @media only screen and (max-width: 800px) {
+            display: none;
+        }
+    }
+}
+
+body.admin-bar #matyou_header {
+    margin-top: 32px;
+}
+
+#matyou_searchform {
+    margin: 0.5em auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    max-width: 640px;
+
+}
+
+@media only screen and (min-width: 600px) {
+    #matyou_searchform {
+        padding-left: 240px;
+    }
+
+    .matyou_sidemenu_open #matyou_searchform {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #matyou_searchform {
+        padding-left: 0;
+    }
+}
+
+#matyou_searchinput {
+    border: 1px solid #303030;
+    border-radius: 40px 0 0 40px;
+    background-color: #121212;
+    box-shadow: 0 0 0px 1000px #121212 inset;
+    padding: 0.5em;
+    padding-left: 1em;
+    font-size: 16px;
+    min-width: 0;
+    flex: 1 1 auto;
+
+    &:focus {
+        outline: none;
+        border-color: #1c62b9;
+    }
+}
+
+#matyou_search_submit {
+    font-family: 'Font Awesome Solid';
+    background-color: #222222;
+    border: none;
+    height: 100%;
+    border-radius: 0 40px 40px 0;
+    color: var(--matyou_font_color);
+    width: 64px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+#matyou_sidemenu_toggle {
+    color: var(--matyou_font_color);
+    font-size: 2.3em;
+    border-radius: 10em;
+    cursor: pointer;
+    margin: auto 0.5em;
+    // padding: 0.2em;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: #ffffff33;
+    }
+}
+
+.matyou_header_logo {
+    height: 100%;
+    display: flex;
+    flex: 0 0 auto;
+
+    img {
+        max-height: 100%;
+        padding: 0.4em;
+        box-sizing: border-box;
+        height: 100%;
+        width: auto;
+    }
+}
