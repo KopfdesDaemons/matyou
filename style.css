@@ -115,7 +115,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .matyou_material3_header.matyou_fixed_header {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 .matyou_material3_header .matyou_material_header_title {
   font-size: var(--matyou_header_headline_font-size);
@@ -277,6 +277,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     height: 100vh;
     top: 0;
     right: 0;
+    z-index: 1;
   }
 }
 #matyou_sidemenu {
@@ -474,6 +475,9 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
   display: flex;
   justify-content: space-between;
 }
+.single .matyou_hero .matyou_metadata_box .matyou_categorie_list {
+  max-width: 70%;
+}
 .single .matyou_hero .matyou_metadata_box .matyou_categorie_list ul {
   padding: 0;
   margin: 0.2em 0;
@@ -486,9 +490,18 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
   display: flex;
 }
 .single .matyou_hero .matyou_metadata_box .matyou_categorie_list ul li a {
+  background: var(--matyou_primary_variant_darker);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 0.3em;
+  border-radius: 5px;
   text-decoration: none;
-  box-sizing: border-box;
-  color: var(--matyou_primary_color);
+  color: var(--matyou_font_color);
+  font-size: 1.2em;
+}
+.single .matyou_hero .matyou_metadata_box .matyou_categorie_list ul li a:hover {
+  background: var(--matyou_primary_variant_much_darker);
 }
 .single .matyou_user_content_container {
   background-color: var(--matyou_background_color_posts);
@@ -1644,18 +1657,18 @@ a {
   margin-right: auto;
 }
 
-.home {
+.home, .archive, .search {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 3em;
 }
-.home main {
+.home main, .archive main, .search main {
   margin-top: 0;
   max-width: 90em;
 }
 @media only screen and (min-width: 1000px) {
-  .home main {
+  .home main, .archive main, .search main {
     min-width: unset;
   }
 }

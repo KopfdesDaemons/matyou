@@ -43,6 +43,8 @@
             justify-content: space-between;
 
             .matyou_categorie_list {
+                max-width: 70%;
+
                 ul {
                     padding: 0;
                     margin: 0.2em 0;
@@ -55,10 +57,19 @@
                         display: flex;
 
                         a {
+                            background: var(--matyou_primary_variant_darker);
+                            text-transform: uppercase;
+                            font-size: 0.8em;
+                            font-weight: bold;
+                            padding: 0.3em;
+                            border-radius: 5px;
                             text-decoration: none;
-                            box-sizing: border-box;
-                            color: var(--matyou_primary_color);
-                            // padding: 0.8em 0.5em;
+                            color: var(--matyou_font_color);
+                            font-size: 1.2em;
+                
+                            &:hover {
+                                background: var(--matyou_primary_variant_much_darker);
+                            }
                         }
                     }
                 }

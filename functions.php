@@ -106,7 +106,8 @@ $matyou_customizer_options = [
     'global-options.php',
     'posts-options.php',
     'pages-options.php',
-    'header-options.php'
+    'header-options.php',
+    'searchresults-options.php',
 ];
 
 foreach ($matyou_customizer_options as $option) {

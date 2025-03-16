@@ -160,7 +160,7 @@ a {
     }
 }
 
-.home {
+.home, .archive, .search {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -402,19 +402,6 @@ select {
         max-height: 2lh;
         overflow: hidden;
     }
-
-    // .matyou_post_card_author_row {
-    //     display: flex;
-    //     align-items: center;
-    //     width: 100%;
-    //     gap: 0.5em;
-    //     font-size: 2rem;
-    //     font-weight: 700;
-
-    //     img {
-    //         border-radius: 5em
-    //     }
-    // }
 
     .matyou_post_card_image_container {
         display: flex;

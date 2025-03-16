@@ -29,4 +29,7 @@
         ?>
     </section>
 </main>
+<?php if (get_theme_mod('searchresults_sidebar', true)) { ?>
+    <aside id="matyou_sidebar"><?php get_sidebar(); ?></aside>
+<?php } ?>
 <?php get_footer(); ?>

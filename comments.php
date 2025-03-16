@@ -16,13 +16,6 @@ if (post_password_required()) {
         ?>
     </h2>
 
-    <?php
-    comment_form(array(
-        'title_reply_before' => '<h2 class="matyou_comment_reply_title">',
-        'title_reply_after'  => '</h2>',
-    ));
-    ?>
-
     <?php if (have_comments()) : ?>
 
 
@@ -45,6 +38,13 @@ if (post_password_required()) {
         <?php endif; ?>
 
     <?php endif; ?>
+
+    <?php
+    comment_form(array(
+        'title_reply_before' => '<h2 class="matyou_comment_reply_title">',
+        'title_reply_after'  => '</h2>',
+    ));
+    ?>
 
     <?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) : ?>
         <p><?php _e('Comments are closed.', 'matyou'); ?></p>
