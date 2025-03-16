@@ -37,12 +37,6 @@
         <div class="matyou_theme_info">
             <div>
                 <a href="https://wordpress.org/themes/matyou/" target="_blank">MatYou WordPress Theme</a>
-                <?php
-                printf(
-                    esc_html__('created by %1$s', 'matyou'),
-                    '<a href="https://ricoswebsite.com/" target="_blank" rel="designer">Rico</a>'
-                );
-                ?>
             </div>
         </div>
     </div>

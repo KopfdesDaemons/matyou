@@ -38,6 +38,7 @@ function matyou_enqueue_scripts()
     }
 
     wp_enqueue_script('matyou_sidemenu_script', get_template_directory_uri() . '/js/matyou_sidemenu.js', null, '1.0', true);
+    wp_enqueue_script('matyou_header_script', get_template_directory_uri() . '/js/matyou_header_script.js', null, '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'matyou_enqueue_scripts');
 
@@ -60,6 +61,7 @@ function matyou_register_menus()
     register_nav_menus(
         array(
             'sidemenu' => __('Sidemenu', 'matyou'),
+            'header-menu' => __('Headermenu', 'matyou'),
             'legal links' => __('Legal links', 'matyou')
         )
     );
@@ -104,6 +106,7 @@ $matyou_customizer_options = [
     'global-options.php',
     'posts-options.php',
     'pages-options.php',
+    'header-options.php'
 ];
 
 foreach ($matyou_customizer_options as $option) {

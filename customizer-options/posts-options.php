@@ -10,7 +10,7 @@ function matyou_custom_posts($wp_customize)
 
     // Post Image
     $wp_customize->add_setting('post_image', array(
-        'default' => true,
+        'default' => false,
         'transport' => 'refresh',
         'sanitize_callback' => 'matyou_sanitize_checkbox',
     ));

@@ -27,6 +27,7 @@
     background-color: var(--matyou_primary_variant_much_darker);
     border-radius: 0 24px 24px 0;
     border-right: 4px solid var(--matyou_primary_color);
+    user-select: none;
 
     a {
         color: var(--matyou_font_color);

@@ -24,30 +24,24 @@ window.addEventListener("DOMContentLoaded", function () {
         const allOpenMenus = document.querySelectorAll('.matyou_submenu_open');
         const parentListItem = listItem.parentElement.parentElement;
         const isInOpenSubmenu = parentListItem.classList.contains('matyou_submenu_open');
-
+        
+        
         if (!isInOpenSubmenu) {
             for (const menu of allOpenMenus) {
                 if (menu === submenu.parentElement) continue;
                 menu.classList.remove('matyou_submenu_open');
             }
         }
-
+        
         listItem.classList.toggle('matyou_submenu_open');
     }
-
-
 
     // Toggle sidemenu
     const sidemenuToggle = this.document.querySelector('#matyou_sidemenu_toggle');
     const body = this.document.querySelector('body');
     sidemenuToggle.addEventListener('click', toogleSidemenu);
-    sidemenuToggle.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            toogleSidemenu(event);
-        }
-    });
 
-    function toogleSidemenu() {
+    function toogleSidemenu() {        
         body.classList.toggle('matyou_sidemenu_open');
     }
 
@@ -55,7 +49,6 @@ window.addEventListener("DOMContentLoaded", function () {
     const closingDiv = this.document.querySelector('#matyou_sidemenu_closing_div');
     closingDiv.addEventListener('click', closeSidemenu)
     function closeSidemenu() {
-        console.log("test");
         body.classList.remove('matyou_sidemenu_open');
     }
 

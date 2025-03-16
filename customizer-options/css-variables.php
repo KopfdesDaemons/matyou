@@ -54,19 +54,13 @@ $matyou_primary_variant_much_darker = "hsl($matyou_primary_hue, " . (max(0, $mat
         --matyou_primary_color: <?php echo $matyou_primary_color ?>;
         --matyou_primary_variant_darker: <?php echo $matyou_primary_variant_darker ?>;
         --matyou_primary_variant_much_darker: <?php echo $matyou_primary_variant_much_darker ?>;
-        --matyou_font_color: <?php echo esc_attr(get_theme_mod('font_color', '#F1F1F1'));
-                                ?>;
-        --matyou_body_font: <?php echo esc_attr(get_theme_mod('body_font', 'Open Sans,Arial,sans-serif'));
-                            ?>;
-        --matyou_body_background_color: <?php echo esc_attr(get_theme_mod('body_background_color', '#0f0f0f'));
-                                        ?>;
-        --matyou_maximum_width_of_posts: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '90') . 'em');
-                                            ?>;
-        --matyou_maximum_width_of_pages: <?php echo esc_attr(get_theme_mod('maximum_width_of_pages', '90') . 'em');
-                                            ?>;
-        --matyou_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', ''));
-                                            ?>;
-        --matyou_background_color_pages: <?php echo esc_attr(get_theme_mod('background_color_pages', ''));
-                                            ?>;
+        --matyou_font_color: <?php echo esc_attr(get_theme_mod('font_color', '#F1F1F1')); ?>;
+        --matyou_body_font: <?php echo esc_attr(get_theme_mod('body_font', 'Open Sans,Arial,sans-serif'));?>;
+        --matyou_body_background_color: <?php echo esc_attr(get_theme_mod('body_background_color', '#0f0f0f'));?>;
+        --matyou_maximum_width_of_posts: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '90') . 'em');?>;
+        --matyou_maximum_width_of_pages: <?php echo esc_attr(get_theme_mod('maximum_width_of_pages', '90') . 'em');?>;
+        --matyou_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', ''));?>;
+        --matyou_background_color_pages: <?php echo esc_attr(get_theme_mod('background_color_pages', ''));?>;
+        --matyou_header_headline_font-size: <?php echo esc_attr(get_theme_mod('header_headline_font_size', '25') . 'px');?>;
     }
 </style>
