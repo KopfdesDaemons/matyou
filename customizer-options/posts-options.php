@@ -99,7 +99,7 @@ function matyou_custom_posts($wp_customize)
 
     // Date format
     $wp_customize->add_setting('posts_date_format', array(
-        'default' => 'span',
+        'default' => 'date',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

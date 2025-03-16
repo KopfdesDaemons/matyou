@@ -11,6 +11,7 @@ $font-size: clamp(12px, 1.5vw, 16px);
     font-size: $font-size;
     max-width: 100%;
     gap: 0.5em;
+    margin-bottom: 1em;
 
     ::-webkit-scrollbar {
         height: 1px;
@@ -19,7 +20,6 @@ $font-size: clamp(12px, 1.5vw, 16px);
     .matyou_pagination_controls a {
         background-color: var(--matyou_primary_color);
         margin: 0 0.5em;
-        padding: 0.8em 2em;
         display: flex;
         color: rgb(14, 14, 14);
     }
@@ -48,7 +48,7 @@ $font-size: clamp(12px, 1.5vw, 16px);
 .post-page-numbers,
 .page-numbers {
     border-radius: 4px;
-    padding: 0.5em 0.8em;
+    padding: 0.8em 1em;
     background-color: rgb(41, 41, 41);
     white-space: nowrap;
     user-select: none;

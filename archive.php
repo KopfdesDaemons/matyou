@@ -41,7 +41,7 @@ include_once get_template_directory() . '/template-parts/sidemenu.php';
         id="matyou_main_content">
         <?php
         global $wp_query;
-        $wp_query->set('paged', 1);
+        $matyou_paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
         if ($wp_query->have_posts()) {
             while ($wp_query->have_posts()) {
@@ -53,6 +53,33 @@ include_once get_template_directory() . '/template-parts/sidemenu.php';
         } else {
             echo esc_html__('No posts found.', 'matyou');
         }
+
+        // Pagination only if needed
+        if ($wp_query->max_num_pages > 1) {
+            echo '<div class="matyou_pagination">';
+            echo '<div class="matyou_pagination_content">';
+
+            echo '<div class="matyou_pagination_controls">';
+            previous_posts_link('«');
+            echo '</div>';
+
+            echo '<div class="matyou_pagination_pages">';
+            echo paginate_links(array(
+                'total' => $wp_query->max_num_pages,
+                'current' => $matyou_paged,
+                'prev_next' => false,
+            ));
+            echo '</div>';
+
+            echo '<div class="matyou_pagination_controls">';
+            next_posts_link('»', $wp_query->max_num_pages);
+            echo '</div>';
+
+            echo '</div>';
+            echo '</div>';
+        }
+
+        wp_reset_postdata();
         ?>
     </section>
 </main>

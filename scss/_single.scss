@@ -36,45 +36,11 @@
             font-weight: 700;
             line-height: 2.8rem;
             white-space: normal;
-            margin-top: 12px;
-        }
-
-        .matyou_hero_author_row {
-            border-bottom: 1px solid #ffffff33;
-            display: flex;
-            gap: 0.5em;
-            align-items: start;
-            font-size: 1.6rem;
-            font-weight: 800;
-            padding-bottom: 0.3em;
-
-            a {
-                text-decoration: none;
-                color: var(--matyou_font_color);
-            }
-
-            img {
-                height: 40px;
-                width: 40px;
-                border-radius: 5em;
-            }
-
-            div {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .matyou_date {
-                font-weight: initial;
-            }
         }
 
         .matyou_metadata_box {
-            background-color: #ffffff1a;
-            margin: 12px 0 0 0;
-            padding: 12px;
-            border-radius: 12px;
-            font-size: 1.4rem;
+            display: flex;
+            justify-content: space-between;
 
             .matyou_categorie_list {
                 ul {
@@ -86,10 +52,13 @@
 
                     li {
                         list-style: none;
+                        display: flex;
 
                         a {
                             text-decoration: none;
+                            box-sizing: border-box;
                             color: var(--matyou_primary_color);
+                            // padding: 0.8em 0.5em;
                         }
                     }
                 }

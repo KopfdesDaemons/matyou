@@ -14,59 +14,47 @@
                     </div>
                 </div>
             <?php endif; ?>
-            <h1 class="title"><?php the_title(); ?></h1>
-
+            
             <?php
             $matyou_author_id = get_the_author_meta('ID');
             $matyou_author_name = esc_html(get_the_author_meta('display_name'));
             $matyou_author_avatar = get_avatar($matyou_author_id, 40);
-
+            
             // Get the current date and time
             $matyou_current_time = current_time('timestamp');
-
+            
             // Get the post date
             $matyou_post_time = get_the_time('U');
-
+            
             // Calculate the difference between the current time and the post time
             $matyou_time_difference = human_time_diff($matyou_post_time, $matyou_current_time);
-
+            
             $matyou_date_format = sprintf(__('%s ago', 'matyou'), $matyou_time_difference);
-            if (get_theme_mod('posts_date_format', 'span') === 'date') $matyou_date_format = get_the_date();
-
-
+            if (get_theme_mod('posts_date_format', 'date') === 'date') $matyou_date_format = get_the_date();
             ?>
-            <div class="matyou_hero_author_row">
-                <?php if (get_theme_mod('post_author', true)) { ?>
-                    <a href="<?php echo esc_url(get_author_posts_url($matyou_author_id)); ?>">
-                        <?php echo $matyou_author_avatar; ?>
-                    </a>
-                <?php } ?>
-                <div>
-                    <?php if (get_theme_mod('post_author', true)) { ?>
-                        <a
-                            href="<?php echo esc_url(get_author_posts_url($matyou_author_id)); ?>"><?php echo $matyou_author_name; ?></a>
-                    <?php } ?>
-                    <?php if (get_theme_mod('post_date', true)) { ?>
-                        <span class="matyou_date"><?php echo esc_html($matyou_date_format); ?></span>
-                    <?php } ?>
-                </div>
-            </div>
+                
             <?php if (get_theme_mod('post_categories', true)) { ?>
                 <div class="matyou_metadata_box">
-                    <div class="matyou_categorie_list">
-                        <?php
-                        $matyou_categories = get_the_category();
-                        if (!empty($matyou_categories)) {
-                            echo '<ul>';
-                            foreach ($matyou_categories as $category) {
-                                echo '<li class="' . 'matyou_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_categories_layout', 'color-blocks')) . '"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . $category->name . '</a></li>';
-                            }
-                            echo '</ul>';
+                <?php if (get_theme_mod('post_date', true)) { ?>
+                    <span class="matyou_date"><?php echo esc_html($matyou_date_format); ?></span>
+                <?php } ?>
+                <div class="matyou_categorie_list">
+                    <?php
+                    $matyou_categories = get_the_category();
+                    if (!empty($matyou_categories)) {
+                        echo '<ul>';
+                        foreach ($matyou_categories as $category) {
+                            echo '<li class="' . 'matyou_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_categories_layout', 'color-blocks')) . '"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . $category->name . '</a></li>';
                         }
-                        ?>
-                    </div>
+                        echo '</ul>';
+                    }
+                    ?>
                 </div>
+            </div>
             <?php } ?>
+
+            <h1 class="title"><?php the_title(); ?></h1>
+            
         </header>
     </section>
     <section class="matyou_content_spacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -469,39 +469,10 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
   font-weight: 700;
   line-height: 2.8rem;
   white-space: normal;
-  margin-top: 12px;
-}
-.single .matyou_hero .matyou_hero_author_row {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  gap: 0.5em;
-  align-items: start;
-  font-size: 1.6rem;
-  font-weight: 800;
-  padding-bottom: 0.3em;
-}
-.single .matyou_hero .matyou_hero_author_row a {
-  text-decoration: none;
-  color: var(--matyou_font_color);
-}
-.single .matyou_hero .matyou_hero_author_row img {
-  height: 40px;
-  width: 40px;
-  border-radius: 5em;
-}
-.single .matyou_hero .matyou_hero_author_row div {
-  display: flex;
-  flex-direction: column;
-}
-.single .matyou_hero .matyou_hero_author_row .matyou_date {
-  font-weight: initial;
 }
 .single .matyou_hero .matyou_metadata_box {
-  background-color: rgba(255, 255, 255, 0.1019607843);
-  margin: 12px 0 0 0;
-  padding: 12px;
-  border-radius: 12px;
-  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
 }
 .single .matyou_hero .matyou_metadata_box .matyou_categorie_list ul {
   padding: 0;
@@ -512,9 +483,11 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
 }
 .single .matyou_hero .matyou_metadata_box .matyou_categorie_list ul li {
   list-style: none;
+  display: flex;
 }
 .single .matyou_hero .matyou_metadata_box .matyou_categorie_list ul li a {
   text-decoration: none;
+  box-sizing: border-box;
   color: var(--matyou_primary_color);
 }
 .single .matyou_user_content_container {
@@ -1432,6 +1405,7 @@ blockquote {
   font-size: clamp(12px, 1.5vw, 16px);
   max-width: 100%;
   gap: 0.5em;
+  margin-bottom: 1em;
 }
 .matyou_pagination ::-webkit-scrollbar {
   height: 1px;
@@ -1439,7 +1413,6 @@ blockquote {
 .matyou_pagination .matyou_pagination_controls a {
   background-color: var(--matyou_primary_color);
   margin: 0 0.5em;
-  padding: 0.8em 2em;
   display: flex;
   color: rgb(14, 14, 14);
 }
@@ -1464,7 +1437,7 @@ blockquote {
 .post-page-numbers,
 .page-numbers {
   border-radius: 4px;
-  padding: 0.5em 0.8em;
+  padding: 0.8em 1em;
   background-color: rgb(41, 41, 41);
   white-space: nowrap;
   -webkit-user-select: none;
@@ -1634,8 +1607,6 @@ a {
 
 .matyou_user_content_container {
   min-height: 70vh;
-  margin: 1em 0;
-  padding: 0 clamp(0.5rem, 2vw, 1rem);
   overflow: hidden;
   font-size: 1.4rem;
 }

@@ -24,6 +24,33 @@
         } else {
             echo esc_html__('No posts found.', 'matyou');
         }
+
+        // Pagination only if needed
+        if ($matyou_query->max_num_pages > 1) {
+            echo '<div class="matyou_pagination">';
+            echo '<div class="matyou_pagination_content">';
+
+            echo '<div class="matyou_pagination_controls">';
+            previous_posts_link('«');
+            echo '</div>';
+
+            echo '<div class="matyou_pagination_pages">';
+            echo paginate_links(array(
+                'total' => $matyou_query->max_num_pages,
+                'current' => $matyou_paged,
+                'prev_next' => false,
+            ));
+            echo '</div>';
+
+            echo '<div class="matyou_pagination_controls">';
+            next_posts_link('»', $matyou_query->max_num_pages);
+            echo '</div>';
+
+            echo '</div>';
+            echo '</div>';
+        }
+
+        wp_reset_postdata();
         ?>
     </section>
 </main>
