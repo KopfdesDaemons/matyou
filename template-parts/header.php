@@ -1,13 +1,20 @@
 <?php
-$fixed_header = (get_theme_mod('fixed_header', false)) ? 'matyou_fixed_header' : '';
+$fixed_header = (get_theme_mod('fixed_header', true)) ? 'matyou_fixed_header' : '';
 ?>
 
 <header class="matyou_header <?php echo esc_attr($fixed_header) ?>">
-    <a href="#matyou_main_content" class="matyou_skip_link"><?php echo esc_html__('Skip to main content', 'matyou') ?></a>
+    <a href="#matyou_main_content"
+        class="matyou_skip_link"><?php echo esc_html__('Skip to main content', 'matyou') ?></a>
 
-    <a href="<?php echo esc_url(home_url('/')); ?>" class="matyou_material_header_title"><?php echo get_bloginfo('name'); ?></a>
-    <span class="matyou_material_header_description"><?php echo get_bloginfo('description'); ?></span>
     <div class="matyou_material_header_content">
+
+        <div class="matyou_header_title_div">
+            <a href="<?php echo esc_url(home_url('/')); ?>"
+                class="matyou_material_header_title"><?php echo get_bloginfo('name'); ?></a>
+            <span class="matyou_material_header_description"><?php echo get_bloginfo('description'); ?></span>
+        </div>
+
+
         <button id="matyou_sidemenu_toggle">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -26,14 +33,28 @@ $fixed_header = (get_theme_mod('fixed_header', false)) ? 'matyou_fixed_header' :
         ?>
 
         <?php if (get_theme_mod('searchbar', true)) { ?>
-        <div class="matyou_material_header_search_div">
-            <button id="matyou_header_search_icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <div id="matyou_expandable_search_field">
-                <?php get_search_form(array('button_text' => 's')); ?>
+            <div class="matyou_material_header_search_div">
+                <button id="matyou_header_search_icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div id="matyou_expandable_search_field">
+                    <?php get_search_form(array('button_text' => 's')); ?>
+                </div>
             </div>
-        </div>
         <?php } ?>
     </div>
+    <style>
+        .matyou_material_header_content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            filter: brightness(0.6);
+            border-radius: 2em;
+            background-image: url("<?php echo get_theme_mod('header_background_image', get_template_directory_uri() . '/images/header-background.jpg',) ?>");
+        }
+    </style>
 </header>

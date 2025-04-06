@@ -29,7 +29,7 @@ if (is_author()) {
         id="matyou_main_content">
 
         <?php if (!is_author() || is_author() && !get_theme_mod('author_header', true)) { ?>
-            <h1>
+            <h1 class="matyou_archive_headline">
                 <?php echo $matyou_archive_title; ?>
             </h1>
         <?php } ?>

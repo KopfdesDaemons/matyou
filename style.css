@@ -103,8 +103,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   src: url("fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("fonts/fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
 }
 .matyou_header {
-  transition: background-color 150ms ease-in;
-  margin-bottom: 0.5em;
+  margin-bottom: 2em;
   width: 100%;
   padding: 0 2em;
   box-sizing: border-box;
@@ -113,6 +112,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   flex-direction: column;
   container-type: inline-size;
   container-name: header;
+  gap: 2em;
+  background-color: var(--matyou_body_background_color);
+}
+.matyou_header .matyou_header_title_div {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 .matyou_header.matyou_fixed_header {
   position: sticky;
@@ -128,6 +136,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 20em;
 }
 .matyou_header .matyou_material_header_content {
+  position: relative;
+  max-width: 80em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,9 +227,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .matyou_header .matyou_material_header_content .matyou_header_menu li:hover > ul, .matyou_header .matyou_material_header_content .matyou_header_menu li:focus-within > ul {
   display: flex;
 }
-@container header  (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   .matyou_header .matyou_material_header_content #matyou_sidemenu_toggle {
     display: flex;
+    z-index: 1;
   }
 }
 .matyou_header .matyou_material_header_content .matyou_material_header_home_link {
@@ -231,6 +242,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   margin: 0 1em;
   gap: 0.5em;
   order: 2;
+  z-index: 1;
 }
 @container header (max-width: 600px) {
   .matyou_header .matyou_material_header_content .matyou_material_header_search_div {
@@ -1266,6 +1278,10 @@ blockquote {
 }
 .matyou_post_author_headline_section + main .matyou_post_card .matyou_post_card_author_row {
   display: none;
+}
+
+.matyou_archive_headline {
+  text-align: center;
 }
 
 #matyou_sidebar {

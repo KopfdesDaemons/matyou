@@ -8,7 +8,7 @@ function matyou_header($wp_customize)
     ));
 
     $wp_customize->add_setting('fixed_header', array(
-        'default' => false,
+        'default' => true,
         'transport' => 'refresh',
         'sanitize_callback' => 'matyou_sanitize_checkbox',
     ));
@@ -47,6 +47,23 @@ function matyou_header($wp_customize)
             'min' => 10,
             'max' => 50,
             'step' => 1,
+        )
+    ));
+
+    // background image
+    $wp_customize->add_setting('header_background_image', array(
+        'default' => get_template_directory_uri() . '/images/header-background.jpg',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'header_background_image',
+        array(
+            'label' => __('Header background image', 'matyou'),
+            'section' => 'custom_theme_header',
+            'settings' => 'header_background_image',
         )
     ));
 }
