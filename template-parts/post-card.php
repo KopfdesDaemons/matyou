@@ -18,12 +18,6 @@ function matyou_display_post_card()
     $matyou_time_difference = human_time_diff($matyou_post_time, $matyou_current_time);
 ?>
     <div class="matyou_post_card <?php if (is_sticky()) echo 'matyou_sticky_post' ?>">
-        <!-- <div class="matyou_post_card_author_row">
-            <a href="<?php echo esc_url(get_author_posts_url($matyou_author_id)); ?>">
-                <?php echo $matyou_author_avatar; ?>
-            </a>
-            <a href="<?php echo esc_url(get_author_posts_url($matyou_author_id)); ?>"><?php echo $matyou_author_name; ?></a>
-        </div> -->
         <?php if (has_post_thumbnail() && get_theme_mod('feed_post_card_image', true)) { ?>
             <a class="matyou_post_card_image_container" href="<?php the_permalink(); ?>">
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">

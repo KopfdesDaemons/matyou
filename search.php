@@ -16,6 +16,7 @@
         $matyou_query = new WP_Query($matyou_args);
 
         if ($matyou_query->have_posts()) {
+            echo '<h1 class="matyou_search_headline">' . sprintf(esc_html__('Search results for "%s"', 'blog-layouts'), esc_html($matyou_search_query)) . '</h1>';
             while ($matyou_query->have_posts()) {
                 $matyou_query->the_post();
                 // Show Posts

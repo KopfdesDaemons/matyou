@@ -1,13 +1,39 @@
 <?php
 get_header();
 include_once get_template_directory() . '/template-parts/sidemenu.php';
+
+$matyou_archive_title = esc_html__('Archive', 'matyou');
+$matyou_archive_post_list_style = 'cards';
+$matyou_sidebar_layout_setting = get_theme_mod('search_sidebar_layout', 'social');
+
+if (is_author()) {
+    $matyou_archive_title = get_the_author();
+} elseif (is_tag()) {
+    $matyou_archive_title = single_tag_title('', false);
+} elseif (is_category()) {
+    $matyou_archive_title = single_cat_title('', false);
+} elseif (is_date()) {
+    if (is_day()) {
+        $matyou_archive_title = esc_html__('Archive for', 'matyou') . ' ' . get_the_date();
+    } elseif (is_month()) {
+        $matyou_archive_title = esc_html__('Archive for', 'matyou') . ' ' . get_the_date('F Y');
+    } elseif (is_year()) {
+        $matyou_archive_title = esc_html__('Archive for', 'matyou') . ' ' . get_the_date('Y');
+    }
+}
 ?>
 
 
 <main role="main" <?php if (get_theme_mod('searchresults_sidebar', true)) echo 'class="matyou_has_sidebar"' ?>>
     <section class="matyou_content_spacer matyou_content_spacer_feed matyou_content_and_sidebar_grid"
         id="matyou_main_content">
-        
+
+        <?php if (!is_author() || is_author() && !get_theme_mod('author_header', true)) { ?>
+            <h1>
+                <?php echo $matyou_archive_title; ?>
+            </h1>
+        <?php } ?>
+
         <!-- author header -->
         <?php if (is_author() && get_theme_mod('author_header', true)) {
             $matyou_author_id = get_the_author_meta('ID');

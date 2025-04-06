@@ -102,7 +102,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-family: "Font Awesome Solid";
   src: url("fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("fonts/fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
 }
-.matyou_material3_header {
+.matyou_header {
   transition: background-color 150ms ease-in;
   margin-bottom: 0.5em;
   width: 100%;
@@ -111,27 +111,30 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: flex;
   align-items: center;
   flex-direction: column;
+  container-type: inline-size;
+  container-name: header;
 }
-.matyou_material3_header.matyou_fixed_header {
+.matyou_header.matyou_fixed_header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 5;
 }
-.matyou_material3_header .matyou_material_header_title {
+.matyou_header .matyou_material_header_title {
   font-size: var(--matyou_header_headline_font-size);
 }
-.matyou_material3_header.matyou_header_menu_open .matyou_material_header_sidemenu {
+.matyou_header.matyou_header_menu_open .matyou_material_header_sidemenu {
   transform: translateX(0);
   visibility: visible;
   width: 20em;
 }
-.matyou_material3_header .matyou_material_header_content {
+.matyou_header .matyou_material_header_content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1em;
+  flex-wrap: wrap;
 }
-.matyou_material3_header .matyou_material_header_content #matyou_sidemenu_toggle {
+.matyou_header .matyou_material_header_content #matyou_sidemenu_toggle {
   all: revert;
   display: none;
   padding: 0.5em;
@@ -140,23 +143,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border: none;
   color: var(--matyou_font_color);
 }
-.matyou_material3_header .matyou_material_header_content #matyou_sidemenu_toggle:focus-visible, .matyou_material3_header .matyou_material_header_content #matyou_sidemenu_toggle:hover {
+.matyou_header .matyou_material_header_content #matyou_sidemenu_toggle:focus-visible, .matyou_header .matyou_material_header_content #matyou_sidemenu_toggle:hover {
   outline-offset: 1px;
   background-color: var(--matyou_primary_variant_darker);
   cursor: pointer;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_home_link {
+.matyou_header .matyou_material_header_content .matyou_material_header_home_link {
   display: none;
   text-decoration: none;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop {
+.matyou_header .matyou_material_header_content .matyou_header_menu {
   display: flex;
   flex-flow: row wrap;
   padding: 0;
   margin: 0;
   font-size: 1.3em;
+  order: 1;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop a {
+.matyou_header .matyou_material_header_content .matyou_header_menu a {
   text-decoration: none;
   color: var(--matyou_font_color);
   border-bottom: 4px solid transparent;
@@ -168,26 +172,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 100%;
   white-space: nowrap;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop a:has(+ .matyou_submenu_toggle) {
+.matyou_header .matyou_material_header_content .matyou_header_menu a:has(+ .matyou_submenu_toggle) {
   padding-right: 0.2em;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li {
+.matyou_header .matyou_material_header_content .matyou_header_menu li {
   list-style: none;
   display: flex;
   position: relative;
   border-radius: 12px;
   gap: 0.5em;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li .matyou_menuitem_container {
+.matyou_header .matyou_material_header_content .matyou_header_menu li .matyou_menuitem_container {
   display: flex;
   align-items: center;
   width: 100%;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li .matyou_menuitem_container .matyou_submenu_toggle {
+.matyou_header .matyou_material_header_content .matyou_header_menu li .matyou_menuitem_container .matyou_submenu_toggle {
   right: 0;
   padding: 0.5em;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li ul {
+.matyou_header .matyou_material_header_content .matyou_header_menu li ul {
   display: none;
   flex-direction: column;
   overflow: visible;
@@ -197,44 +201,50 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   z-index: 5;
   position: absolute;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li ul li {
+.matyou_header .matyou_material_header_content .matyou_header_menu li ul li {
   transition: all 100ms;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li ul ul {
+.matyou_header .matyou_material_header_content .matyou_header_menu li ul ul {
   left: 100%;
   top: 0;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li > ul .matyou_submenu_toggle {
+.matyou_header .matyou_material_header_content .matyou_header_menu li > ul .matyou_submenu_toggle {
   transform: rotate(-90deg);
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li:hover, .matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li:focus-within {
+.matyou_header .matyou_material_header_content .matyou_header_menu li:hover, .matyou_header .matyou_material_header_content .matyou_header_menu li:focus-within {
   background-color: var(--matyou_primary_variant_darker);
 }
-.matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li:hover > ul, .matyou_material3_header .matyou_material_header_content .matyou_header_menu_desktop li:focus-within > ul {
+.matyou_header .matyou_material_header_content .matyou_header_menu li:hover > ul, .matyou_header .matyou_material_header_content .matyou_header_menu li:focus-within > ul {
   display: flex;
 }
-@media only screen and (max-width: 600px) {
-  .matyou_material3_header .matyou_material_header_content #matyou_sidemenu_toggle {
+@container header  (max-width: 600px) {
+  .matyou_header .matyou_material_header_content #matyou_sidemenu_toggle {
     display: flex;
   }
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_home_link {
+.matyou_header .matyou_material_header_content .matyou_material_header_home_link {
   color: var(--matyou_font_color);
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div {
   display: flex;
   align-items: center;
   margin: 0 1em;
   gap: 0.5em;
+  order: 2;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div #matyou_expandable_search_field {
+@container header (max-width: 600px) {
+  .matyou_header .matyou_material_header_content .matyou_material_header_search_div {
+    order: 0;
+  }
+}
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div #matyou_expandable_search_field {
   transition: all 200ms;
   width: 0;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div #matyou_expandable_search_field.matyou_header_search_open {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div #matyou_expandable_search_field.matyou_header_search_open {
   width: 10em;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div #matyou_header_search_icon {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div #matyou_header_search_icon {
   all: revert;
   font-size: 1.4em;
   background-color: transparent;
@@ -248,25 +258,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 2em;
   color: var(--matyou_font_color);
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div #matyou_header_search_icon:hover {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div #matyou_header_search_icon:hover {
   background-color: var(--matyou_primary_variant_darker);
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div form {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form {
   display: flex;
   overflow: hidden;
   transition: all 200ms;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div form label {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form label {
   display: flex;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div form input {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input {
   all: unset;
   margin: 0;
   padding-left: 1em;
   width: 10em;
   box-sizing: border-box;
 }
-.matyou_material3_header .matyou_material_header_content .matyou_material_header_search_div form .search-submit {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form .search-submit {
   display: none;
 }
 
@@ -277,7 +287,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     height: 100vh;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 6;
   }
 }
 #matyou_sidemenu {
@@ -295,7 +305,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   transform: translateX(-260px);
   flex-direction: column;
   font-size: 1.4rem;
-  z-index: 1;
+  z-index: 6;
   background-color: var(--matyou_primary_variant_much_darker);
   border-radius: 0 24px 24px 0;
   border-right: 4px solid var(--matyou_primary_color);
@@ -443,7 +453,8 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
 }
 .single main {
   margin-top: 0;
-  max-width: var(--matyou_maximum_width_of_posts);
+  max-width: min(100%, var(--matyou_maximum_width_of_posts));
+  box-sizing: border-box;
 }
 @media only screen and (min-width: 1000px) {
   .single main {
@@ -552,6 +563,7 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
   background-color: #212121;
   border-radius: 12px;
   font-size: 1.2rem;
+  padding: 1em;
 }
 .single .matyou_authorbox .matyou_author_avatar {
   flex: 1 0 auto;
@@ -585,7 +597,6 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
 .single .matyou_authorbox .matyou_author_details .matyou_author_name_row h3 a {
   text-decoration: none;
   font-size: 1.5em;
-  color: var(--matyou_font_color);
 }
 .single .matyou_authorbox .matyou_author_details .matyou_author_name_row h3 + a {
   padding: 0.5em;
@@ -722,6 +733,10 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
 }
 .wp-block-navigation__responsive-container-content li ul a {
   background-color: unset;
+}
+
+.wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  color: var(--matyou_font_color);
 }
 
 .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
@@ -1206,6 +1221,53 @@ blockquote {
   background-color: var(--matyou_primary_color);
 }
 
+.matyou_post_author_headline_section {
+  display: flex;
+  justify-content: center;
+}
+.matyou_post_author_headline_section header {
+  padding: 4em 4em;
+  max-width: 100em;
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(2em, 2vw, 3em);
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--matyou_primary_variant_much_darker);
+  border-radius: 3em;
+  align-items: center;
+}
+.matyou_post_author_headline_section header img {
+  border-radius: 2em;
+  height: auto;
+  width: auto;
+  max-width: 160px;
+  min-width: 120px;
+  flex: 1;
+}
+.matyou_post_author_headline_section header .matyou_author_data {
+  font-size: 1.4rem;
+  flex: 1 0 70%;
+}
+.matyou_post_author_headline_section header .matyou_author_data h1 {
+  font-size: 3.6rem;
+  margin-top: 0;
+}
+.matyou_post_author_headline_section header .matyou_author_data .matyou_author_name::before {
+  content: "@";
+}
+.matyou_post_author_headline_section header .matyou_author_data .matyou_author_name::after {
+  content: "‧";
+  margin: 0 0.5em;
+}
+.matyou_post_author_headline_section + main {
+  margin-top: 2em;
+}
+.matyou_post_author_headline_section + main .matyou_post_card .matyou_post_card_author_row {
+  display: none;
+}
+
 #matyou_sidebar {
   min-width: 300px;
   padding: 0 24px 50px 0;
@@ -1348,9 +1410,6 @@ blockquote {
 }
 #comments.matyou_comments_layout_portal .url {
   font-size: 1em;
-}
-#comments.matyou_comments_layout_portal .url:before {
-  content: "@";
 }
 #comments.matyou_comments_layout_portal .avatar {
   border-radius: 5em;
@@ -1509,7 +1568,8 @@ blockquote {
 .page-template-default main {
   margin-top: 0;
   padding-left: clamp(0em, 2vw, 1.2em);
-  max-width: var(--matyou_maximum_width_of_pages);
+  max-width: min(100%, var(--matyou_maximum_width_of_pages));
+  box-sizing: border-box;
 }
 @media only screen and (min-width: 1000px) {
   .page-template-default main {
@@ -1657,18 +1717,24 @@ a {
   margin-right: auto;
 }
 
-.home, .archive, .search {
+.home,
+.archive,
+.search {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 3em;
 }
-.home main, .archive main, .search main {
+.home main,
+.archive main,
+.search main {
   margin-top: 0;
   max-width: 90em;
 }
 @media only screen and (min-width: 1000px) {
-  .home main, .archive main, .search main {
+  .home main,
+  .archive main,
+  .search main {
     min-width: unset;
   }
 }
@@ -1839,9 +1905,13 @@ select:hover {
   flex-wrap: wrap;
   flex: 1 0 auto;
   gap: 2em;
+  container-type: inline-size;
+  container-name: post-card;
 }
-.matyou_post_card:nth-child(even) .matyou_post_card_image_container {
-  order: 1;
+@container post-card (min-width: 600px) {
+  .matyou_post_card:nth-child(even) .matyou_post_card_image_container {
+    order: 1;
+  }
 }
 .matyou_post_card p,
 .matyou_post_card span,
@@ -1899,7 +1969,7 @@ select:hover {
 }
 .matyou_post_card .matyou_post_card_content_div {
   max-width: 100%;
-  flex: 1 0 50%;
+  flex: 1 1 50%;
 }
 
 .home .widget {

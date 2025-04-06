@@ -1,22 +1,23 @@
 .page-template-default {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-top: 3em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 3em;
 
-    main {
-        margin-top: 0;
-        padding-left: clamp(0em, 2vw, 1.2em);
-        max-width: var(--matyou_maximum_width_of_pages);
+  main {
+    margin-top: 0;
+    padding-left: clamp(0em, 2vw, 1.2em);
+    max-width: min(100%, var(--matyou_maximum_width_of_pages));
+    box-sizing: border-box;
 
-        @media only screen and (min-width: 1000px) {
-            min-width: unset;
-        }
-
-        .matyou_user_content_container {
-            border-radius: 12px;
-            line-height: 1.8em;
-            background-color: var(--matyou_background_color_pages);
-        }
+    @media only screen and (min-width: 1000px) {
+      min-width: unset;
     }
+
+    .matyou_user_content_container {
+      border-radius: 12px;
+      line-height: 1.8em;
+      background-color: var(--matyou_background_color_pages);
+    }
+  }
 }

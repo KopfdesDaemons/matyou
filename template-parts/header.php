@@ -2,10 +2,10 @@
 $fixed_header = (get_theme_mod('fixed_header', false)) ? 'matyou_fixed_header' : '';
 ?>
 
-<header class="matyou_material3_header <?php echo esc_attr($fixed_header) ?>">
+<header class="matyou_header <?php echo esc_attr($fixed_header) ?>">
     <a href="#matyou_main_content" class="matyou_skip_link"><?php echo esc_html__('Skip to main content', 'matyou') ?></a>
 
-    <span class="matyou_material_header_title"><?php echo get_bloginfo('name'); ?></span>
+    <a href="<?php echo esc_url(home_url('/')); ?>" class="matyou_material_header_title"><?php echo get_bloginfo('name'); ?></a>
     <span class="matyou_material_header_description"><?php echo get_bloginfo('description'); ?></span>
     <div class="matyou_material_header_content">
         <button id="matyou_sidemenu_toggle">
@@ -16,7 +16,7 @@ $fixed_header = (get_theme_mod('fixed_header', false)) ? 'matyou_fixed_header' :
         if (has_nav_menu('header-menu')) {
             wp_nav_menu(array(
                 'theme_location' => 'header-menu',
-                'menu_class' => 'matyou_header_menu_desktop',
+                'menu_class' => 'matyou_header_menu',
                 'container' => false,
                 'walker' => new matyou_menu_walker(),
             ));
