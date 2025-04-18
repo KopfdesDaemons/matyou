@@ -26,7 +26,11 @@
   }
 
   .matyou_material_header_title {
-    font-size: var(--matyou_header_headline_font-size);
+    font-size: var(--matyou_header_headline_font_size);
+  }
+
+  .matyou_material_header_description {
+    font-size: var(--matyou_header_slogan_font_size);
   }
 
   &.matyou_header_menu_open .matyou_material_header_sidemenu {
@@ -210,6 +214,10 @@
           padding-left: 1em;
           width: 10em;
           box-sizing: border-box;
+
+          &::placeholder {
+            color: var(--matyou_font_color);
+          }
         }
 
         .search-submit {

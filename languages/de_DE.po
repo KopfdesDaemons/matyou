@@ -1,0 +1,249 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-04-18 12:34+0200\n"
+"PO-Revision-Date: 2025-04-18 12:34+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;esc_html__;esc_html_e;"
+"esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:8
+msgid "File not found"
+msgstr "Datei nicht gefunden"
+
+#: 404.php:10
+msgid ""
+"The page you are looking for could not be found. Please check the URL or go "
+"back to the homepage."
+msgstr ""
+"Die gesuchte Seite konnte nicht gefunden werden. Bitte überprüfen Sie die "
+"URL oder kehren Sie zur Startseite zurück."
+
+#: 404.php:11
+msgid "Go to the home page"
+msgstr "Gehe zur Startseite"
+
+#: archive.php:5
+msgid "Archive"
+msgstr "Archiv"
+
+#: archive.php:17 archive.php:19 archive.php:21
+msgid "Archive for"
+msgstr "Archiv für"
+
+#: archive.php:63 customizer-options/posts-options.php:6
+msgid "Posts"
+msgstr "Beiträge"
+
+#: archive.php:82 home.php:25 search.php:28
+msgid "No posts found."
+msgstr "Keinen Beitrag gefunden."
+
+#: comments.php:12
+msgid "One Comment"
+msgstr "Ein Kommentar"
+
+#: comments.php:14
+#, php-format
+msgid "%d Comments"
+msgstr "%d Kommentare"
+
+#: comments.php:35
+msgid "Older Comments"
+msgstr "Ältere Kommentare"
+
+#: comments.php:36
+msgid "Newer Comments"
+msgstr "Neuere Kommentare"
+
+#: comments.php:50
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: customizer-options/global-options.php:6
+msgid "Global"
+msgstr "Global"
+
+#: customizer-options/global-options.php:18
+msgid ""
+"All fonts are hosted locally. Consent according to the GDPR is not required "
+"for this theme (cookie banner)."
+msgstr ""
+"Alle Schriftarten werden lokal gehostet. Eine Einwilligung gemäß DSGVO ist "
+"für dieses Theme nicht erforderlich (Cookie-Banner)."
+
+#: customizer-options/global-options.php:19
+msgid "Main text font"
+msgstr "Hauptschriftart"
+
+#: customizer-options/global-options.php:50
+msgid "Primary color"
+msgstr "Primarfarbe"
+
+#: customizer-options/global-options.php:62
+#: customizer-options/pages-options.php:50
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: customizer-options/global-options.php:74
+msgid "Font color"
+msgstr "Schriftfarbe"
+
+#: customizer-options/header-options.php:6
+msgid "Header"
+msgstr "Header"
+
+#: customizer-options/header-options.php:18
+msgid "Fix Header"
+msgstr "Fixiere Header"
+
+#: customizer-options/header-options.php:31
+msgid "Show search bar"
+msgstr "Zeige Suchleiste"
+
+#: customizer-options/header-options.php:44
+msgid "Title font size"
+msgstr "Titel-Schriftgröße"
+
+#: customizer-options/pages-options.php:6
+msgid "Pages"
+msgstr "Seiten"
+
+#: customizer-options/pages-options.php:8
+msgid "Options for WordPress \"Pages\"."
+msgstr "Optionen für WordPress \"Seiten\"."
+
+#: customizer-options/pages-options.php:21
+msgid "Maximum width of pages"
+msgstr "Maximale Breite der Seiten"
+
+#: customizer-options/pages-options.php:39
+#: customizer-options/posts-options.php:77
+#: customizer-options/searchresults-options.php:20
+msgid "Show sidebar"
+msgstr "Zeige Sidebar"
+
+#: customizer-options/posts-options.php:8
+msgid "Settings of the individual posts."
+msgstr "Einstellungen der einzelnen Beiträge."
+
+#: customizer-options/posts-options.php:20
+msgid "Show post image"
+msgstr "Zeige Beitragsbild"
+
+#: customizer-options/posts-options.php:33
+msgid "Show author"
+msgstr "Zeige Autor"
+
+#: customizer-options/posts-options.php:47
+msgid "Maximum width of posts"
+msgstr "Maximale Breite der Beiträge"
+
+#: customizer-options/posts-options.php:63
+msgid "Posts background color"
+msgstr "Beitragshintergrundfarbe"
+
+#: customizer-options/posts-options.php:90
+msgid "Show date"
+msgstr "Zeige Datum"
+
+#: customizer-options/posts-options.php:110
+msgid "Date format"
+msgstr "Datumsformat"
+
+#: customizer-options/posts-options.php:112
+msgid "span"
+msgstr "Spanne"
+
+#: customizer-options/posts-options.php:113
+msgid "date"
+msgstr "Datum"
+
+#: customizer-options/posts-options.php:127
+msgid "Show categories"
+msgstr "Zeige Kategorien"
+
+#: customizer-options/posts-options.php:140
+msgid "Show tags"
+msgstr "Zeige Tags"
+
+#: customizer-options/posts-options.php:153
+msgid "Show author box"
+msgstr "Zeige Autorenbox"
+
+#: customizer-options/posts-options.php:166
+msgid "Show post pagination"
+msgstr "Zeige Pagination"
+
+#: customizer-options/searchresults-options.php:6
+msgid "Search Results"
+msgstr "Suchergebnisse"
+
+#: customizer-options/searchresults-options.php:8
+msgid "Options for the search results."
+msgstr "Optionen für die Suchergebnisse."
+
+#: functions.php:63
+msgid "Sidemenu"
+msgstr "Sidemenu"
+
+#: functions.php:64
+msgid "Headermenu"
+msgstr "Headermenü"
+
+#: functions.php:65
+msgid "Legal links"
+msgstr "Legal links"
+
+#: functions.php:74
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: index copy.php:23 index.php:23 page.php:19 single.php:71
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: search.php:19
+#, php-format
+msgid "Search results for \"%s\""
+msgstr "Suchergebnisse für \"%s\""
+
+#: sidebar.php:6
+msgid "Fill the sidebar in the customizer"
+msgstr "Befülle die Sidebar im Customizer"
+
+#: single.php:32 template-parts/post-card.php:39
+#, php-format
+msgid "%s ago"
+msgstr "vor %s"
+
+#: single.php:128
+msgid "&laquo; Previous Post"
+msgstr "&laquo; Vorheriger Beitrag"
+
+#: single.php:130
+msgid "Next Post &raquo;"
+msgstr "Nächster Beitrag &raquo;"
+
+#: template-parts/header.php:7
+msgid "Skip to main content"
+msgstr "Springe zum Hauptinhalt"
+
+#: template-parts/header.php:31 template-parts/sidemenu.php:24
+msgid "Select a menu in the customizer"
+msgstr "Wähle ein Menü im Customizer"
+
+#: template-parts/sidemenu.php:9
+msgid "Startpage"
+msgstr "Startseite"
+
+#~ msgid "Header background image"
+#~ msgstr "Headerhintergrundbild"

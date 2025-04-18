@@ -43,18 +43,4 @@ $fixed_header = (get_theme_mod('fixed_header', true)) ? 'matyou_fixed_header' : 
             </div>
         <?php } ?>
     </div>
-    <style>
-        .matyou_material_header_content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            filter: brightness(0.6);
-            border-radius: 2em;
-            background-image: url("<?php echo get_theme_mod('header_background_image', get_template_directory_uri() . '/images/header-background.jpg',) ?>");
-        }
-    </style>
 </header>

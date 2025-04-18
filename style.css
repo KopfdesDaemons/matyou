@@ -4,12 +4,12 @@ Theme Name: MatYou
 Author: Rico
 Author URI: https://ricoswebsite.com/
 Text Domain: matyou
-Description: 
+Description: This theme is inspired by the popular and modern Material Design.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Version: 1.0.0
 Requires at least: 5.0
 Requires PHP: 7.0
-Tested up to: 8.1
+Tested up to: 8.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -128,7 +128,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   z-index: 5;
 }
 .matyou_header .matyou_material_header_title {
-  font-size: var(--matyou_header_headline_font-size);
+  font-size: var(--matyou_header_headline_font_size);
+}
+.matyou_header .matyou_material_header_description {
+  font-size: var(--matyou_header_slogan_font_size);
 }
 .matyou_header.matyou_header_menu_open .matyou_material_header_sidemenu {
   transform: translateX(0);
@@ -287,6 +290,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding-left: 1em;
   width: 10em;
   box-sizing: border-box;
+}
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input::-moz-placeholder {
+  color: var(--matyou_font_color);
+}
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input::placeholder {
+  color: var(--matyou_font_color);
 }
 .matyou_header .matyou_material_header_content .matyou_material_header_search_div form .search-submit {
   display: none;
@@ -487,6 +496,7 @@ body.admin-bar #matyou_sidemenu .matyou_sidebar_content {
   max-height: 703px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 1em;
 }
 .single .matyou_hero h1 {
   font-size: 2.5rem;
@@ -1233,6 +1243,11 @@ blockquote {
   background-color: var(--matyou_primary_color);
 }
 
+.matyou_search_headline {
+  text-align: center;
+  font-size: 3em;
+}
+
 .matyou_post_author_headline_section {
   display: flex;
   justify-content: center;
@@ -1282,6 +1297,7 @@ blockquote {
 
 .matyou_archive_headline {
   text-align: center;
+  font-size: 3em;
 }
 
 #matyou_sidebar {
@@ -1294,6 +1310,7 @@ blockquote {
        column-width: 15em;
   max-width: 350px;
   box-sizing: border-box;
+  margin-bottom: 4em;
 }
 #matyou_sidebar .widget:first-of-type,
 #matyou_sidebar .widget_block:first-of-type {

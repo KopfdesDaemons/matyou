@@ -3,12 +3,12 @@ Theme Name: MatYou
 Author: Rico
 Author URI: https://ricoswebsite.com/
 Text Domain: matyou
-Description: 
+Description: This theme is inspired by the popular and modern Material Design.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Version: 1.0.0
 Requires at least: 5.0
 Requires PHP: 7.0
-Tested up to: 8.1
+Tested up to: 8.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -20,6 +20,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @use "scss/single" as *;
 @use "scss/wp-block" as *;
 @use "scss/polls-css" as *;
+@use "scss/search" as *;
 @use "scss/archive" as *;
 @use "scss/sidebar" as *;
 @use "scss/comments" as *;
@@ -28,7 +29,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @use "scss/404" as *;
 
 html {
-  // scrollbar-color: hsl(0, 0%, 67%) transparent;
   font-size: 10px;
   color: var(--matyou_font_color);
 }
@@ -59,7 +59,6 @@ main {
   min-height: 90vh;
   display: flex;
   flex: 1 0 60%;
-  // min-width: 60%;
   flex-direction: column;
   align-items: center;
   margin-top: 6em;

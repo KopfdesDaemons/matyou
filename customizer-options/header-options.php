@@ -41,7 +41,7 @@ function matyou_header($wp_customize)
 
     $wp_customize->add_control('header_headline_font_size', array(
         'type' => 'range',
-        'label' => __('Menu font size', 'matyou'),
+        'label' => __('Title font size', 'matyou'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 10,
@@ -50,20 +50,21 @@ function matyou_header($wp_customize)
         )
     ));
 
-    // background image
-    $wp_customize->add_setting('header_background_image', array(
-        'default' => get_template_directory_uri() . '/images/header-background.jpg',
+    // Slogan size setting
+    $wp_customize->add_setting('header_slogan_font_size', array(
+        'default' => '10',
         'transport' => 'refresh',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'absint',
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_Control(
-        $wp_customize,
-        'header_background_image',
-        array(
-            'label' => __('Header background image', 'matyou'),
-            'section' => 'custom_theme_header',
-            'settings' => 'header_background_image',
+    $wp_customize->add_control('header_slogan_font_size', array(
+        'type' => 'range',
+        'label' => __('Slogan font size', 'matyou'),
+        'section' => 'custom_theme_header',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 30,
+            'step' => 1,
         )
     ));
 }
