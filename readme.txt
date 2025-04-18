@@ -22,6 +22,9 @@ This theme is inspired by the popular and modern Material Design.
 
 == Changelog ==
 
+    = 1.0.1 =
+        - Fixed typo in screenshot
+
     = 1.0.0 =
         - Initial release
 
