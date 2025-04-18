@@ -8,7 +8,7 @@ function matyou_header($wp_customize)
     ));
 
     $wp_customize->add_setting('fixed_header', array(
-        'default' => true,
+        'default' => false,
         'transport' => 'refresh',
         'sanitize_callback' => 'matyou_sanitize_checkbox',
     ));

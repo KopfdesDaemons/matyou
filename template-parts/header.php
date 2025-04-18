@@ -1,5 +1,5 @@
 <?php
-$fixed_header = (get_theme_mod('fixed_header', true)) ? 'matyou_fixed_header' : '';
+$fixed_header = (get_theme_mod('fixed_header', false)) ? 'matyou_fixed_header' : '';
 ?>
 
 <header class="matyou_header <?php echo esc_attr($fixed_header) ?>">
