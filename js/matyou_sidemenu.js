@@ -41,10 +41,6 @@ window.addEventListener(
     const body = this.document.querySelector("body");
     sidemenuToggle.addEventListener("click", toogleSidemenu);
     const sidemenu = this.document.querySelector("#matyou_sidemenu");
-    const menuLinks = sidemenu.querySelectorAll("a, button, .matyou_submenu_toggle");
-    menuLinks.forEach((link) => {
-      if (window.innerWidth < 600) link.setAttribute("tabindex", "-1");
-    });
 
     sidemenu.addEventListener("focusout", (event) => {
       if (!sidemenu.contains(event.relatedTarget)) {
@@ -56,15 +52,9 @@ window.addEventListener(
       body.classList.toggle("matyou_sidemenu_open");
 
       if (body.classList.contains("matyou_sidemenu_open")) {
-        menuLinks.forEach((link) => {
-          link.setAttribute("tabindex", "0");
-        });
         sidemenu.querySelector("a").focus();
       } else {
         sidemenuToggle.focus();
-        menuLinks.forEach((link) => {
-          link.setAttribute("tabindex", "-1");
-        });
       }
     }
 

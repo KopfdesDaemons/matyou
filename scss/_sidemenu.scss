@@ -19,8 +19,7 @@
   width: 0;
   background-color: inherit;
   width: 240px;
-  transition: transform 200ms;
-  display: flex;
+  transition: all 200ms;
   transform: translateX(-260px);
   flex-direction: column;
   font-size: 1.4rem;
@@ -29,12 +28,15 @@
   border-radius: 0 24px 24px 0;
   border-right: 4px solid var(--matyou_primary_color);
   user-select: none;
+  display: none;
+  transition-behavior: allow-discrete;
 
   a {
     color: var(--matyou_font_color);
   }
 
   @media only screen and (min-width: 600px) {
+    display: flex;
     transform: translateX(0);
   }
 
@@ -177,6 +179,11 @@
 
 .matyou_sidemenu_open #matyou_sidemenu {
   transform: translateX(0);
+  display: flex;
+
+  @starting-style {
+    transform: translateX(-260px);
+  }
 
   @media only screen and (min-width: 600px) {
     transform: translateX(-260px);
