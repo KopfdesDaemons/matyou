@@ -1,6 +1,5 @@
 <?php
 get_header();
-include_once get_template_directory() . '/template-parts/sidemenu.php';
 
 $matyou_archive_title = esc_html__('Archive', 'matyou');
 $matyou_archive_post_list_style = 'cards';

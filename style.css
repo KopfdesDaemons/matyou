@@ -171,7 +171,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding: 0;
   margin: 0;
   font-size: 1.3em;
-  order: 1;
 }
 .matyou_header .matyou_material_header_content .matyou_header_menu a {
   text-decoration: none;
@@ -239,27 +238,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .matyou_header .matyou_material_header_content .matyou_material_header_home_link {
   color: var(--matyou_font_color);
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile {
   display: flex;
   align-items: center;
   margin: 0 1em;
   gap: 0.5em;
-  order: 2;
   z-index: 1;
 }
-@container header (max-width: 600px) {
-  .matyou_header .matyou_material_header_content .matyou_material_header_search_div {
-    order: 0;
-  }
-}
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div #matyou_expandable_search_field {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div .matyou_expandable_search_field,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile .matyou_expandable_search_field {
   transition: all 200ms;
   width: 0;
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div #matyou_expandable_search_field.matyou_header_search_open {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div .matyou_expandable_search_field.matyou_header_search_open,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile .matyou_expandable_search_field.matyou_header_search_open {
   width: 10em;
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div #matyou_header_search_icon {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div .matyou_header_search_icon,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile .matyou_header_search_icon {
   all: revert;
   font-size: 1.4em;
   background-color: transparent;
@@ -273,32 +270,49 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 2em;
   color: var(--matyou_font_color);
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div #matyou_header_search_icon:hover {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div .matyou_header_search_icon:hover,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile .matyou_header_search_icon:hover {
   background-color: var(--matyou_primary_variant_darker);
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div form {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile form {
   display: flex;
   overflow: hidden;
   transition: all 200ms;
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div form label {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form label,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile form label {
   display: flex;
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile form input {
   all: unset;
   margin: 0;
   padding-left: 1em;
   width: 10em;
   box-sizing: border-box;
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input::-moz-placeholder {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input::-moz-placeholder, .matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile form input::-moz-placeholder {
   color: var(--matyou_font_color);
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input::placeholder {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form input::placeholder,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile form input::placeholder {
   color: var(--matyou_font_color);
 }
-.matyou_header .matyou_material_header_content .matyou_material_header_search_div form .search-submit {
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div form .search-submit,
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile form .search-submit {
   display: none;
+}
+.matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile {
+  display: none;
+}
+@container header (max-width: 600px) {
+  .matyou_header .matyou_material_header_content .matyou_material_header_search_div {
+    display: none;
+  }
+  .matyou_header .matyou_material_header_content .matyou_material_header_search_div_mobile {
+    display: flex;
+  }
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,6 +1,5 @@
 <?php
 get_header();
-include_once get_template_directory() . '/template-parts/sidemenu.php';
 while (have_posts()) :
     the_post();
 ?>

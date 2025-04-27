@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php include_once get_template_directory() . '/template-parts/sidemenu.php'; ?>
 <section class="matyou_hero">
     <header>
         <h1 class="title"><?php the_title(); ?></h1>

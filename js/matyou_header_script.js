@@ -1,45 +1,31 @@
-window.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    const headerSearchIcon = document.querySelector(
-      "#matyou_header_search_icon"
-    );
+window.addEventListener("DOMContentLoaded", function () {
+  const searchContainers = document.querySelectorAll(".matyou_material_header_search_div");
 
-    const expandableSeachfield = this.document.querySelector(
-      "#matyou_expandable_search_field"
-    );
-    if (headerSearchIcon && expandableSeachfield) {
-      headerSearchIcon.addEventListener("click", toggleSearch);
-      window.addEventListener("click", closeSearchWhenOpen);
-    }
-
+  searchContainers.forEach((container) => {
+    const icon = container.querySelector(".matyou_header_search_icon");
+    const field = container.querySelector(".matyou_expandable_search_field");
+    const searchFieldInput = field.querySelector(".search-field");
+    searchFieldInput.tabIndex = -1;
     let searchOpen = false;
 
-    function toggleSearch(event) {
-      if (
-        event.target === expandableSeachfield ||
-        expandableSeachfield.contains(event.target)
-      )
-        return;
-      expandableSeachfield.classList.toggle("matyou_header_search_open");
+    if (icon && field) {
+      icon.addEventListener("click", (event) => toggleSearch(event, field));
+      searchFieldInput.addEventListener("blur", () => {
+        if (searchOpen) {
+          toggleSearch(new Event("blur"), field);
+        }
+      });
+    }
+
+    function toggleSearch(event, field) {
+      if (event.target === field || field.contains(event.target)) return;
       searchOpen = !searchOpen;
+      field.classList.toggle("matyou_header_search_open", searchOpen);
+      searchFieldInput.tabIndex = searchOpen ? 0 : -1;
       if (searchOpen) {
-        const searchfield = expandableSeachfield.querySelector(".search-field");
-        searchfield.focus();
+        searchFieldInput.focus();
         event.preventDefault();
       }
     }
-
-    function closeSearchWhenOpen(event) {
-      if (searchOpen) {
-        const isInSearch = headerSearchIcon.parentElement.contains(
-          event.target
-        );
-        if (!isInSearch && headerSearchIcon && searchOpen) {
-          toggleSearch(event);
-        }
-      }
-    }
-  },
-  false
-);
+  });
+});

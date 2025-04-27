@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php include_once get_template_directory() . '/template-parts/sidemenu.php'; ?>
 <main role="main" <?php if (get_theme_mod('searchresults_sidebar', true)) echo 'class="matyou_has_sidebar"' ?>>
     <section class="matyou_content_spacer" id="matyou_main_content">
         <?php

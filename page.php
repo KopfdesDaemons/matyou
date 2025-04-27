@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php include_once get_template_directory() . '/template-parts/sidemenu.php'; ?>
 <main <?php if (get_theme_mod('pages_sidebar', true)) echo 'class="matyou_has_sidebar"' ?>>
     <h1 class="title"><?php the_title(); ?></h1>
     <section class="matyou_content_spacer">
