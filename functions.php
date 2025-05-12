@@ -45,6 +45,7 @@ add_action('wp_enqueue_scripts', 'matyou_enqueue_scripts');
 // Number of words previewed in the feed
 function matyou_custom_excerpt_length($length)
 {
+    if (is_admin()) return $length;
     return get_theme_mod('words_in_snippet', 30);
 }
 add_filter('excerpt_length', 'matyou_custom_excerpt_length', 999);

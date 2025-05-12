@@ -22,6 +22,9 @@ This theme is inspired by the popular and modern Material Design.
 
 == Changelog ==
 
+    = 1.0.3 =
+        -  Detailed license information for the fonts
+
     = 1.0.2 =
         - Fixed keyboard navagation
 
@@ -52,10 +55,45 @@ This theme is inspired by the popular and modern Material Design.
 
     = Fonts =
 
-    Google Fonts
+    Fragment Mono
     License: Open Font License
     License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
-    Source: https://fonts.google.com/
+    Source: https://fonts.google.com/specimen/Fragment+Mono
+
+    Lato
+    License: Open Font License
+    License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    Source: https://fonts.google.com/specimen/Lato
+
+    Montserrat
+    License: Open Font License
+    License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    Source: https://fonts.google.com/specimen/Montserrat
+
+    Nato Sans
+    License: Open Font License
+    License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    Source: https://fonts.google.com/specimen/Noto+Sans
+
+    Open Sans
+    License: Open Font License
+    License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    Source: https://fonts.google.com/specimen/Open+Sans
+
+    Poppins
+    License: Open Font License
+    License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    Source: https://fonts.google.com/specimen/Poppins
+
+    Quicksand
+    License: Open Font License
+    License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    Source: https://fonts.google.com/specimen/Quicksand
+
+    Roboto
+    License: Open Font License
+    License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    Source: https://fonts.google.com/specimen/Roboto
 
     Font Awesome
     License: Font Awesome Free License
